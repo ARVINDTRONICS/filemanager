@@ -14,7 +14,6 @@ import CloseIcon from "@material-ui/icons/Close";
 import InputModal from "../InputModal";
 import ImageIcon from "@material-ui/icons/Image";
 import Popover from "@material-ui/core/Popover";
-import isDblTouchTap from "../../helpers/index";
 class File extends Component {
   constructor(props) {
     super(props);

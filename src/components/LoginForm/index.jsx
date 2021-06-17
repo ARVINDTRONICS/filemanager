@@ -61,9 +61,9 @@ const LoginForm = ({ history, updateUserByKey }) => {
         <Formik
           initialValues={{ email: "", password: "" }}
           validationSchema={LoginSchema}
-          onSubmit={(values, actions) => {
+          onSubmit={async (values, actions) => {
             actions.setSubmitting(false);
-            handleAuthentication(values);
+            await handleAuthentication(values);
           }}
         >
           {({ touched, errors, isSubmitting }) => (

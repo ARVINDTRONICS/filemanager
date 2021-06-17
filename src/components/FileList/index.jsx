@@ -37,6 +37,7 @@ export const FileList = ({
     }
   }, [subfileList, fileList]);
 
+  //filteredList
   const filteredListBasedOnPath = () => {
     let tempFileList = [...fileList];
     if (currentPath.length === 0 && list) {
@@ -59,7 +60,7 @@ export const FileList = ({
       setList(subfileList);
     }
   };
-
+  //handlers
   const handleClick = (name, index) => {
     setSelectedFilesAction(name, index);
   };
