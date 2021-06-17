@@ -17,11 +17,7 @@ const MadStreetRoutes = () => {
               path={route.path}
               exact={route.exact}
               render={(props) => {
-                if (localStorage.getItem("userToken")) {
-                  return <route.component {...props} />;
-                } else {
-                  return <LogIn {...props} />;
-                }
+                return <route.component {...props} />;
               }}
             />
           ))}
