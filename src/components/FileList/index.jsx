@@ -54,7 +54,9 @@ export const FileList = ({
   const filteredListBasedOnSearch = (searchTerm) => {
     if (subfileList && searchTerm && searchTerm.length > 0) {
       let tempList = [...subfileList];
-      let result = tempList.filter((each) => each.name.includes(searchTerm));
+      let result = tempList.filter((each) =>
+        each.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
       setList(result);
     } else {
       setList(subfileList);
